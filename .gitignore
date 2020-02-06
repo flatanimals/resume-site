@@ -19,3 +19,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+public/imgs
+src/data/jobs.js
+src/data/skillsets.js
