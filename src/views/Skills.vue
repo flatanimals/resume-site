@@ -1,7 +1,7 @@
 <template>
   <layout>
     <div class="main-content">
-      <h1 class="view-header">Skills &amp; Technologies</h1>
+      <h1 class="view-header print:text-center">Skills &amp; Technologies</h1>
 
       <div class="pb-8">
         <skills-list
@@ -9,7 +9,7 @@
           :key="i"
           :title="set.name"
           :skills="set.skills"
-          class="mb-8 shadow-lg"
+          class="mb-8 shadow-lg print:shadow-none print:mb-0"
         ></skills-list>
       </div>
     </div>

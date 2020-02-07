@@ -3,9 +3,8 @@
 </template>
 
 <script>
-
 export default {
-  name: "main-app",
+  name: "main-app"
 };
 </script>
 
@@ -18,7 +17,16 @@ body {
   @apply h-full;
 }
 
+@media print {
+  html,
+  body {
+    @apply bg-white;
+  }
+}
+
 #app {
   @apply h-full;
+  @appy antialiased;
+  @appy subpixel-antialiased;
 }
 </style>

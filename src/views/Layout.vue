@@ -1,32 +1,32 @@
 <template>
   <div>
-    <header class="site-header">
-      <!-- <AvatarImage src="imgs/me.jpg" class="w-32 h-32"></AvatarImage> -->
+    <header class="site-header print:border-none print:py-4 relative">
+      <a href="https://github.com/flatanimals" class="absolute top-0 right-0 w-8 h-8 mt-3 mr-3" target="_blank" rel="nofollow">
+        <img src="imgs/github-logo.svg" alt="View on Github" />
+      </a>
       <h1 class="site-header-title">
-        <span class="text-gray-600 border-b">fletch</span>
-        <span class="text-gray-500">er padgett</span>
+        <span class="text-gray-600 border-b print:text-black">fletch</span>
+        <span class="print:text-black">er padgett</span>
       </h1>
       <p class="site-header-subtitle">software developer</p>
     </header>
-    <site-nav class="mb-8 border-t-2 border-orange-700"></site-nav>
+    <site-nav class="mb-8 border-t-2 border-orange-700 shadow print:hidden"></site-nav>
     <main>
       <slot />
     </main>
-    <footer class="text-gray-600 text-sm text-center mb-8">
+    <footer class="text-gray-600 text-sm text-center mb-8 print:hidden">
       <div>Fletch Padgett &copy; 2020</div>
     </footer>
   </div>
 </template>
 
 <script>
-// import AvatarImage from "@/components/AvatarImage";
 import SiteNav from "@/components/SiteNav";
 
 export default {
   name: "layout",
   components: {
     SiteNav
-    // AvatarImage
   }
 };
 </script>
@@ -42,7 +42,7 @@ export default {
 .site-header-title {
   @apply mt-4;
   @apply font-semibold;
-  /* @apply text-gray-100; */
+  @apply text-gray-500;
   @apply text-2xl;
 }
 .site-header-subtitle {

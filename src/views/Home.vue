@@ -1,34 +1,28 @@
 <template>
   <div class="home">
-    <div class="home-card" style="max-width:400px">
-      <div class="home-card-content">
-        <avatar-image src="imgs/1.jpg"></avatar-image>
-        <h1 class="home-title md:text-xl lg:text-2xl">FLETCH PADGETT</h1>
-        <p class="home-subtitle md:text-base lg:text-lg">Software Developer</p>
-        <div class="mt-8">
-          <div class="flex justify-around">
-            <router-link class="home-link mr-3" to="/resume">Resume</router-link>
-            <router-link class="home-link mr-3" to="/skills">Skills</router-link>
-            <router-link class="home-link" to="/contact">Contact</router-link>
-          </div>
+    <div class="home-content">
+      <h1 class="home-title">
+        <span class="text-gray-600 border-b print:text-black">fletch</span>
+        <span class="print:text-black">er padgett</span>
+      </h1>
+      <p class="home-subtitle">software developer</p>
+      <div class="mt-8">
+        <div class="flex justify-around">
+          <router-link class="home-link mr-2" to="/resume">Resume</router-link>
+          <router-link class="home-link mr-2" to="/skills">Skills</router-link>
+          <router-link class="home-link" to="/contact">Contact</router-link>
         </div>
       </div>
     </div>
-    <div class="home-c">fletch padgett &copy; 2020</div>
+
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import AvatarImage from "@/components/AvatarImage";
-
 export default {
   name: "home",
   data() {
     return {};
-  },
-  components: {
-    AvatarImage
   }
 };
 </script>
@@ -39,43 +33,29 @@ export default {
   @apply flex-col;
   @apply justify-start;
   @apply items-stretch;
-  @apply justify-around;
   @apply h-full;
-  @apply bg-teal-900;
-  @apply p-4;
-}
-
-.home-card {
-  @apply w-full;
-  @apply mx-auto;
   @apply bg-gray-100;
-  @apply rounded-t-sm;
-  @apply rounded-b;
-  @apply overflow-hidden;
-  @apply shadow-xl;
+  @apply p-4;
+  @apply pt-24
 }
 
-.home-card-content {
-  @apply p-3;
-  @apply p-8;
-  @apply flex;
-  @apply flex-col;
-  @apply items-center;
-  @apply border-t-4;
-  @apply border-orange-500;
+.home-content {
+    @apply text-center;
+    @apply mx-auto;
+    max-width: 480px;
 }
 
 .home-title {
   @apply mt-4;
   @apply font-semibold;
-  @apply text-lg;
-
-  @apply text-gray-800;
+  @apply text-gray-500;
+  @apply text-4xl;
 }
 
 .home-subtitle {
-  @apply text-sm;
-  @apply text-gray-600;
+  @apply text-lg;
+  @apply text-gray-500;
+  @apply font-light;
 }
 
 .home-link {
@@ -83,11 +63,11 @@ export default {
   @apply px-3;
   @apply py-2;
   @apply rounded;
-  @apply bg-white;
+  /* @apply bg-white; */
   @apply text-teal-700;
   @apply uppercase;
   @apply text-sm;
-  @apply shadow;
+  /* @apply shadow; */
 }
 
 .home-link:hover {

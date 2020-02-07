@@ -1,9 +1,13 @@
 <template>
   <layout>
     <div class="main-content">
-      <h1 class="view-header">Resume</h1>
+      <h1 class="view-header print:hidden">Resume</h1>
 
-      <article v-for="(job, i) in jobs" :key="i" class="resume">
+      <article
+        v-for="(job, i) in jobs"
+        :key="i"
+        class="resume shadow-lg print:shadow-none mb-8 print:mb-0"
+      >
         <panel-card>
           <div class="text-center">
             <p class="text-4xl mb-4">{{job.company}}</p>
@@ -17,27 +21,27 @@
           <section class="mb-4 py-4 md:px-16">
             <!-- <h2 class="resume-section-header">Experience</h2> -->
             <ul class="list-disc ml-6">
-              <li v-for="(item,i) in job.items" :key="i" class="py-1">{{item}}</li>
+              <li v-for="(item,i) in job.items" :key="i" class="py-1 print:leading-tight">{{item}}</li>
             </ul>
           </section>
-          <section class="mb-4">
+          <section class="mb-4 print:hidden">
             <h2 class="resume-section-header">Accounts / Clients</h2>
-            <div class="flex flex-row flex-wrap md:p-4">
+            <div class="flex flex-row flex-wrap md:p-4 justify-center">
               <div
                 v-for="(client, i) in job.highlighted"
                 :key="i"
-                class="p-4 w-1/2 sm:w-1/4 text-center justify-center"
+                class="p-4 w-1/2 sm:w-1/4 print:w-1/4 text-center"
               >
                 <img
                   :src="client.logo"
                   :alt="client.company"
-                  class="rounded-lg overflow-hidden mb-4"
+                  :title="client.company"
+                  class="resume-client-image"
                 />
-                <div class="text-sm hidden">{{client.company}}</div>
               </div>
             </div>
           </section>
-          <section v-if="job.visuals.length" class="md:p-8">
+          <section v-if="job.visuals.length" class="md:p-8 print:hidden">
             <div v-for="(visual,i) in job.visuals" :key="i">
               <div class="rounded-lg overflow-hidden my-2">
                 <img :src="visual.src" :alt="visual.caption" />
@@ -72,11 +76,14 @@ export default {
 
 <style lang="postcss">
 .resume {
-  @apply mb-8;
   @apply mx-auto;
   @apply px-2;
   @apply bg-white;
-  @apply shadow-lg
+  page-break-after: always;
+}
+
+.resume:last-of-type {
+  page-break-after: avoid;
 }
 
 .resume-section-header {
@@ -84,5 +91,11 @@ export default {
   @apply font-semibold;
   @apply text-center;
   @apply mb-8;
+}
+
+.resume-client-image {
+  @apply rounded-lg;
+  @apply overflow-hidden;
+  @apply mb-4;
 }
 </style>
