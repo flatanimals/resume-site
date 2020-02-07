@@ -2,6 +2,9 @@
 node_modules
 /dist
 
+# Config file
+src/config.js
+
 # local env files
 .env.local
 .env.*.local
@@ -19,9 +22,3 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
-
-public/imgs/logos
-public/imgs/visuals
-src/config.js
-src/data/jobs.js
-src/data/skillsets.js
