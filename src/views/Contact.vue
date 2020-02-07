@@ -4,7 +4,7 @@
       <h1 class="view-header print:text-center">Contact &amp; Information</h1>
 
       <div class="contact">
-        <form action="https://formspree.io/xpzdlvbw" method="POST">
+        <form :action="config.contact.endpoint" method="POST">
           <input type="text" name="_gotcha" style="display:none" />
           <div class="contact-form">
             <div class="contact-form-control">
@@ -93,9 +93,15 @@
 <script>
 // @ is an alias to /src
 import Layout from "./Layout";
+import config from "@/config";
 
 export default {
   name: "contact",
+  data () {
+      return {
+          config
+      }
+  },
   components: {
     Layout
   }

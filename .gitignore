@@ -20,6 +20,8 @@ yarn-error.log*
 *.sln
 *.sw?
 
-public/imgs
+public/imgs/logos
+public/imgs/visuals
+src/config.js
 src/data/jobs.js
 src/data/skillsets.js
