@@ -3,15 +3,15 @@
     <div class="main-content">
       <h1 class="view-header print:text-center">Skills &amp; Technologies</h1>
 
-      <div class="pb-8">
+      <section class="skills">
         <skills-list
           v-for="(set,i) in skillsets"
           :key="i"
           :title="set.name"
           :skills="set.skills"
-          class="mb-8 shadow-lg print:shadow-none print:mb-0"
+          class="mb-8 print:mb-0 shadow-lg print:shadow-none"
         ></skills-list>
-      </div>
+      </section>
     </div>
   </layout>
 </template>
@@ -35,3 +35,8 @@ export default {
   }
 };
 </script>
+
+<style lang="postcss">
+.skills {}
+</style>
+

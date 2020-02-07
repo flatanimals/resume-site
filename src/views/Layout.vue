@@ -1,7 +1,12 @@
 <template>
   <div>
-    <header class="site-header print:border-none print:py-4 relative">
-      <a href="https://github.com/flatanimals" class="absolute top-0 right-0 w-8 h-8 mt-3 mr-3" target="_blank" rel="nofollow">
+    <header class="site-header print:border-none print:py-4">
+      <a
+        href="https://github.com/flatanimals/resume-site"
+        class="site-header-github"
+        target="_blank"
+        rel="nofollow"
+      >
         <img src="imgs/github-logo.svg" alt="View on Github" />
       </a>
       <h1 class="site-header-title">
@@ -10,11 +15,11 @@
       </h1>
       <p class="site-header-subtitle">software developer</p>
     </header>
-    <site-nav class="mb-8 border-t-2 border-orange-700 shadow print:hidden"></site-nav>
+    <site-nav class="site-nav print:hidden"></site-nav>
     <main>
       <slot />
     </main>
-    <footer class="text-gray-600 text-sm text-center mb-8 print:hidden">
+    <footer class="site-footer print:hidden">
       <div>Fletch Padgett &copy; 2020</div>
     </footer>
   </div>
@@ -38,6 +43,16 @@ export default {
   @apply border-b-8;
   @apply border-teal-900;
   @apply bg-white;
+  @apply relative;
+}
+.site-header-github {
+  @apply absolute;
+  @apply top-0;
+  @apply right-0;
+  @apply w-8;
+  @apply h-8;
+  @apply mt-3;
+  @apply mr-3;
 }
 .site-header-title {
   @apply mt-4;
@@ -50,7 +65,19 @@ export default {
   @apply text-gray-500;
   @apply font-light;
 }
-
+.site-nav {
+  @apply mb-8;
+  @apply border-t-2;
+  @apply border-orange-700;
+  @apply shadow;
+}
+.site-footer {
+  @apply text-gray-600;
+  @apply text-sm;
+  @apply text-center;
+  /* safari hack: safari does not respect bottom margin. */
+  @apply pb-8;
+}
 .main-content {
   @apply mx-auto;
   max-width: 800px;

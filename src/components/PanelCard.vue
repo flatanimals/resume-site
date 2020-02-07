@@ -1,7 +1,6 @@
 <template>
-  <div class="w-full p-4">
-  <!-- <div class="w-full p-4 bg-white border rounded"> -->
-    <h2 class="mb-4 font-semibold text-lg">{{title}}</h2>
+  <div class="panel-card">
+    <h2 class="panel-card-title">{{title}}</h2>
     <slot></slot>
   </div>
 </template>
@@ -13,5 +12,14 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
+.panel-card {
+  @apply w-full;
+  @apply p-4;
+}
+.panel-card-title {
+  @apply mb-4;
+  @apply font-semibold;
+  @apply text-lg;
+}
 </style>

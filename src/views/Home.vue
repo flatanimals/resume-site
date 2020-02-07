@@ -63,11 +63,9 @@ export default {
   @apply px-3;
   @apply py-2;
   @apply rounded;
-  /* @apply bg-white; */
   @apply text-teal-700;
   @apply uppercase;
   @apply text-sm;
-  /* @apply shadow; */
 }
 
 .home-link:hover {
