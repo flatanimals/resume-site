@@ -17,7 +17,7 @@ $ cp src/config-example.js src/config.js
 $ cp src/data/jobs-example.js src/data/jobs.js
 $ cp src/data/skills-example.js src/data/skills.js
 
-# open in files in your favoite editor
+# open files in your favoite editor
 # add your data
 
 ```

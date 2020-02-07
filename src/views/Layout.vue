@@ -15,11 +15,11 @@
       </h1>
       <p class="site-header-subtitle">software developer</p>
     </header>
-    <site-nav class="site-nav print:hidden"></site-nav>
+    <site-nav class="site-nav"></site-nav>
     <main>
       <slot />
     </main>
-    <footer class="site-footer print:hidden">
+    <footer class="site-footer">
       <div>Fletch Padgett &copy; 2020</div>
     </footer>
   </div>
@@ -91,5 +91,13 @@ export default {
   @apply opacity-50;
   @apply pb-6;
   letter-spacing: 1px;
+}
+
+@media print {
+    .site-header-github,
+    .site-nav,
+    .site-footer {
+        display: none;
+    }
 }
 </style>
