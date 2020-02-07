@@ -4,12 +4,12 @@
     <div class=" bg-gray-300 w-full h-2 rounded-full shadow shadow-inner overflow-hidden">
       <div class="h-full bg-teal-600  rounded-full" :style="barWidth"></div>
     </div>
-    <div class="flex justify-between text-xs mt-1 px-2 text-gray-500">
+    <!-- <div class="flex justify-between text-xs mt-1 px-2 text-gray-500">
         <span>Noob</span>
         <span>Beginner</span>
         <span>Intermediate</span>
         <span>Advanced</span>
-    </div>
+    </div> -->
   </div>
 </template>
 

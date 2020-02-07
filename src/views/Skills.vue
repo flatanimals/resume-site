@@ -1,16 +1,25 @@
 <template>
-  <div class>
-    <h1 class="px-4 text-lg font-bold">Skills</h1>
+  <layout>
+    <div class="main-content">
+      <h1 class="view-header">Skills &amp; Technologies</h1>
 
-    <div class="flex flex-col">
-      <skills-list v-for="(set,i) in skillsets" :key="i" :title="set.name" :skills="set.skills" class="w-2/3"></skills-list>
+      <div class="pb-8">
+        <skills-list
+          v-for="(set,i) in skillsets"
+          :key="i"
+          :title="set.name"
+          :skills="set.skills"
+          class="mb-8 shadow-lg"
+        ></skills-list>
+      </div>
     </div>
-  </div>
+  </layout>
 </template>
 
 <script>
 // @ is an alias to /src
-import skillsets from '@/data/skillsets'
+import Layout from "./Layout";
+import skillsets from "@/data/skillsets";
 import SkillsList from "@/components/SkillsList";
 
 export default {
@@ -21,6 +30,7 @@ export default {
     };
   },
   components: {
+    Layout,
     SkillsList
   }
 };

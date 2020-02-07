@@ -1,5 +1,6 @@
 <template>
-  <div class="w-full p-4 bg-white border rounded">
+  <div class="w-full p-4">
+  <!-- <div class="w-full p-4 bg-white border rounded"> -->
     <h2 class="mb-4 font-semibold text-lg">{{title}}</h2>
     <slot></slot>
   </div>
