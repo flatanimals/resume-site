@@ -6,22 +6,30 @@
       <article
         v-for="(job, i) in jobs"
         :key="i"
-        class="resume shadow-lg print:shadow-none mb-8 print:mb-0"
+        class="resume shadow-lg print:shadow-none mb-16 print:mb-0"
       >
         <panel-card>
-          <div class="text-center">
+          <div class="text-center mb-4">
             <p class="text-4xl mb-4">{{job.company}}</p>
             <p class="text-lg">{{job.title}}</p>
             <p class="text-sm text-gray-700 mb-2">{{job.from}} - {{job.to}}</p>
           </div>
-          <section class="mb-4" v-if="job.overview">
-            <p>{{ job.overview }}</p>
+          <div v-for="(role,idx) in job.roles" :key="idx" class="py-2">
+          <section class="mb-2 py-2 md:px-16" v-if="role.title">
+            <p class="font-semibold">{{ role.title }}</p>
           </section>
-          <section class="mb-4 py-4 md:px-16">
+          <section class="mb-2 py-2 md:px-16" v-if="role.description">
+            <p>{{ role.description }}</p>
+          </section>
+          <section class="mb-2 py-2 md:px-16" v-if="role.overview">
+            <p>{{ role.overview }}</p>
+          </section>
+          <section class="mb-4 py-2 md:px-16">
             <ul class="list-disc ml-6">
-              <li v-for="(item,i) in job.items" :key="i" class="py-1 print:leading-tight">{{item}}</li>
+              <li v-for="(item,i) in role.items" :key="i" class="py-1 print:leading-tight">{{item}}</li>
             </ul>
           </section>
+          </div>
           <section class="mb-4 print:hidden">
             <h2 class="resume-section-header">Accounts / Clients</h2>
             <div class="resume-client-list md:p-4">
