@@ -18,18 +18,25 @@ export default {};
   @apply flex;
   @apply justify-center;
   @apply w-full;
-  @apply bg-orange-500;
+  @apply bg-orange-400;
   @apply border-b;
   @apply border-orange-700;
 }
 .nav-link {
-  @apply block px-3 py-3 uppercase text-orange-900 mr-2;
+  @apply block px-3 py-3 uppercase text-orange-900;
 }
-.nav-link:hover,
+.nav-link:hover {
+  @apply pb-1 border-b-4 border-orange-800 ;
+}
 .nav-link.router-link-exact-active {
-  @apply pb-1 border-b-4 border-orange-700;
+  @apply pb-1 border-b-4 border-teal-800 ;
 }
 .nav-link:last-child {
-    @apply mr-0;
+  @apply mr-0;
+}
+@screen sm {
+  .nav-link {
+    @apply px-5;
+  }
 }
 </style>

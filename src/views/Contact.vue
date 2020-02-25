@@ -150,16 +150,16 @@ export default {
 .contact-submit {
   @apply text-center;
   @apply w-full;
-  @apply bg-orange-500;
+  @apply bg-teal-800;
   @apply rounded;
   @apply p-3;
   @apply text-lg;
-  @apply text-orange-900;
+  @apply text-blue-100;
   @apply font-semibold;
 }
 .contact-submit:hover {
   @apply text-white;
-  @apply bg-teal-900;
+  @apply bg-orange-500;
 }
 .contact-select {
   @apply block;

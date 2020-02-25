@@ -10,7 +10,7 @@
         <img src="imgs/github-logo.svg" alt="View on Github" />
       </a>
       <h1 class="site-header-title">
-        <span class="text-gray-600 border-b print:text-black">fletch</span>
+        <span class="text-teal-700 border-b print:text-black">fletch</span>
         <span class="print:text-black">er padgett</span>
       </h1>
       <p class="site-header-subtitle">software developer</p>
@@ -41,7 +41,7 @@ export default {
   @apply text-center;
   @apply py-8;
   @apply border-b-8;
-  @apply border-teal-900;
+  @apply border-teal-800;
   @apply bg-white;
   @apply relative;
 }
